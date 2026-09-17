@@ -1,4 +1,4 @@
--- Keep only your personal input overrides here. Uncommented settings below
+-- Keep only your input overrides here. Uncommented settings below
 -- replace Omarchy's defaults.
 
 -- Keyboard layout and options.
@@ -79,7 +79,7 @@ hl.config({
 })
 
 -- The user's input.lua already configures four-finger workspace swipes.
--- Keep that personal setting without adding a three-finger gesture.
+-- Keep that setting without adding a three-finger gesture.
 
 -- Launchpad-like Apps view and an Omarchy-native Expose alternative.
 hl.gesture({

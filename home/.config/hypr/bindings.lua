@@ -1,7 +1,7 @@
--- Keep only your personal keybinding overrides here. Add new bindings or
+-- Keep only your keybinding overrides here. Add new bindings or
 -- unbind defaults before replacing them.
 
--- Cmd/Super+Space switches between English and Russian.
+-- Cmd/Super+Space switches keyboard layouts.
 hl.unbind("SUPER + SPACE")
 o.bind("SUPER + SPACE", "Switch keyboard language", "hyprctl switchxkblayout all next")
 

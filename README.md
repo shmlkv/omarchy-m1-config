@@ -1,14 +1,14 @@
-# Omarchy M1 config
+# Omarchy for MacBook
 
-Personal Omarchy configuration for a MacBook Air M1: familiar Mac shortcuts, a Russian keyboard layout, touchpad gestures, and the full Go launcher. Configuration snapshot from September 17, 2026.
+Omarchy configuration for MacBook: Mac-style keyboard shortcuts, touchpad gestures, emoji, and the full Go launcher.
 
-Built for Omarchy with Lua-based Hyprland configuration, used with Hyprland 0.56.2. This repository contains user settings, not a distribution or driver installer. It has not been tested on other machines.
+Built for Omarchy with Lua-based Hyprland configuration. Tested on a MacBook Air M1 with Hyprland 0.56.2; other MacBook models have not been tested.
 
 ## Shortcuts and gestures
 
 | Action | Shortcut |
 |---|---|
-| Switch English / Russian Mac layout | Cmd+Space |
+| Switch keyboard layout | Cmd+Space |
 | Full Go menu | F4 / Apple Spotlight key |
 | Select a region and save a screenshot | Option+1 |
 | Shortcut list with Command/Option labels | Cmd+K |
@@ -21,9 +21,9 @@ Built for Omarchy with Lua-based Hyprland configuration, used with Hyprland 0.56
 | Scratchpad | Four-finger swipe down |
 | Open / close Noctalia | Three-finger swipe left/right |
 
-Tap to click, tap-and-drag, natural scrolling, and two-finger right-click are enabled. The screensaver displays `shmlkv` with the standard Omarchy animation.
+Tap to click, tap-and-drag, natural scrolling, and two-finger right-click are enabled. Includes customizable screensaver text with the standard Omarchy animation.
 
-`mac-editing.lua` adds Cmd+C/V/X/A/Z, find, save, tab shortcuts, text navigation, and selection. Some actions behave differently or are disabled in terminals. Commands use physical keycodes so they also work with the Russian layout. These shortcuts replace some standard Omarchy window-management bindings; see the file for the full list.
+`mac-editing.lua` adds Cmd+C/V/X/A/Z, find, save, tab shortcuts, text navigation, and selection. Some actions behave differently or are disabled in terminals. Commands use physical keycodes for layout-independent shortcuts. These shortcuts replace some standard Omarchy window-management bindings; see the file for the full list.
 
 ## Contents
 
@@ -33,11 +33,10 @@ Tap to click, tap-and-drag, natural scrolling, and two-finger right-click are en
 - `home/.config/fontconfig/`: Apple Color Emoji and FiraCode Nerd Font preferences.
 - `home/.config/noctalia/`: a companion panel with its extra bar and notification daemon disabled.
 - `home/.config/voxtype/` and `home/.config/systemd/user/voxtype.service`: local dictation settings.
-- `shell/codex-aliases.bash`: optional `x` and `ч` aliases for Codex.
 
 ## Applying the configuration
 
-Compare these files with your own settings first. Do not copy the entire `home` directory over an existing profile: it includes personal preferences, and Noctalia and Voxtype require separate installations.
+Compare these files with your own settings first. Do not copy the entire `home` directory over an existing profile: review the settings first, and install Noctalia and Voxtype separately if needed.
 
 To apply the core keyboard and touchpad configuration, run from the repository root:
 
@@ -65,17 +64,8 @@ Copy the remaining files selectively, backing up the corresponding settings firs
 - **Emoji:** the picker is Omarchy's built-in `omarchy.emojis`. Fontconfig selects Apple Color Emoji when that font is available. The font is not distributed in this repository; install it separately if you have the right to use it. FiraCode Nerd Font is not included either.
 - **Screensaver:** back up `~/.config/omarchy/branding/screensaver.txt`, then copy the supplied file. To generate your own text: `omarchy ascii "yourname" > ~/.config/omarchy/branding/screensaver.txt`.
 
-## Optional Codex aliases
-
-```bash
-alias x='codex --dangerously-bypass-approvals-and-sandbox'
-alias ч='codex --dangerously-bypass-approvals-and-sandbox'
-```
-
-Only add these to `~/.bashrc` intentionally: they disable Codex approvals and sandboxing. The Cyrillic `ч` occupies the same physical key as `x` on the Russian layout. These aliases are not applied automatically.
-
 ## Credits
 
 The Mac preset base and menu wrapper come from [niraj-envision/omarchy-mac-keybinding](https://github.com/niraj-envision/omarchy-mac-keybinding), MIT, Copyright © 2026 Niraj Envision. Its license is preserved in `LICENSES/omarchy-mac-keybinding.txt`. Configuration templates originate from [Omarchy](https://github.com/omacom/omarchy); its license is included separately.
 
-This snapshot excludes tokens, account credentials, SSH keys, command history, dictation models, program binaries, and font files. Bash syntax, JSON/TOML/XML formats, and the current Hyprland configuration were checked; deployment to another machine has not been tested.
+The repository excludes tokens, account credentials, SSH keys, command history, dictation models, program binaries, and font files. JSON/TOML/XML formats and the current Hyprland configuration were checked; deployment to another machine has not been tested.

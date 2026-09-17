@@ -1,7 +1,7 @@
 -- Command stays SUPER; Control and Option keep their native meanings.
 -- Explicit key-up events follow Omarchy's clipboard workaround.
 local queue, sending = {}, false
--- XKB keycodes are layout-independent: sending Latin key names fails in ru(mac).
+-- XKB keycodes are layout-independent: symbolic key names can fail with alternate layouts.
 local keycodes = {
   A=38, B=56, C=54, D=40, F=41, K=45, L=46, N=57, O=32,
   P=33, R=27, S=39, T=28, U=30, V=55, W=25, X=53, Z=52,
