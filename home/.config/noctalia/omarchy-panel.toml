@@ -1,0 +1,33 @@
+# Additional widget panel alongside Omarchy.
+[shell]
+setup_wizard_enabled = false
+polkit_agent = false
+clipboard_enabled = false
+lang = "ru"
+
+[shell.panel]
+control_center_placement = "floating"
+control_center_position = "top_right"
+
+[bar.default]
+enabled = false
+
+[wallpaper]
+enabled = false
+
+[dock]
+enabled = false
+
+[notification]
+enable_daemon = false
+
+[osd]
+enabled = false
+
+[theme.templates]
+enable_builtin_templates = false
+enable_community_templates = false
+
+[control_center]
+width = 600
+sidebar = "full"
