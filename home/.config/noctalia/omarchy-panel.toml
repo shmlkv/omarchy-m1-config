@@ -3,7 +3,7 @@
 setup_wizard_enabled = false
 polkit_agent = false
 clipboard_enabled = false
-lang = "ru"
+lang = "en"
 
 [shell.panel]
 control_center_placement = "floating"

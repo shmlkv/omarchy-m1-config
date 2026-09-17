@@ -31,5 +31,5 @@
   // Display MacBook modifier names in Learn -> Keybindings.
   "learn.keybindings": {"icon":"","label":"Keybindings","action":"~/.local/bin/omarchy-menu-keybindings-mac"},
   // END omarchy-mac-keybinding-menu
-  "personal-emoji": {"icon":"","label":"Emoji","description":"Apple Emoji — выбор и вставка эмодзи","action":"omarchy-menu-emoji"},
+  "personal-emoji": {"icon":"","label":"Emoji","description":"Apple Emoji — pick and insert emoji","action":"omarchy-menu-emoji"},
 }
